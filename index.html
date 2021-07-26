@@ -1027,47 +1027,23 @@
 
             <!-- Shortcode: Contact Form -->
             <div class="awilo_fn_contact_form">
-              <form
-                action="/"
-                method="post"
-                class="contact_form"
-                id="contact_form"
-              >
-                <!-- RETURN MESSAGES -->
-                <div
-                  class="returnmessage"
-                  data-success="Your message has been received, We will contact you soon."
-                ></div>
-                <div class="empty_notice">
-                  <span>Please Fill Required Fields</span>
-                </div>
-                <!-- /RETURN MESSAGES -->
-
-                <div class="your-name">
-                  <input class="name" type="text" placeholder="Name" />
-                </div>
-                <div class="your-email">
-                  <input class="email" type="text" placeholder="Email" />
-                </div>
-                <div class="your-messagse">
-                  <textarea
-                    class="message"
-                    placeholder="Message"
-                    cols="3"
-                    rows="8"
-                  ></textarea>
-                </div>
-                <div class="button">
-                  <a
-                    href="#"
-                    class="awilo_fn_main_button awilo_fn_contact_sendbtn"
-                  >
-                    <span>Send Message</span>
-                    <span>Send Message</span>
-                  </a>
-                </div>
-              </form>
+            
+              <div class="button" type="submit" value="Send">
+                <a
+                  type="submit"
+                  value="Send"
+                  href="#"
+                  class="awilo_fn_main_button awilo_fn_contact_sendbtn"
+                >
+                  <span>Schedule a call</span>
+                  <span>Schedule a call</span>
+                </a>
+                <br>
             </div>
+            <br>
+            <br>
+            <br>
+            <br>
             <!-- /Shortcode: Contact Form -->
 
             <!-- Shortcoce: Info List-->
@@ -1152,6 +1128,46 @@
     <script src="js/nicescroll.js"></script>
     <script src="js/magnific-popup.js"></script>
     <script src="js/init.js"></script>
+    <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+    <script>
+      /* paste this line in verbatim */
+      window.formbutton =
+        window.formbutton ||
+        function () {
+          (formbutton.q = formbutton.q || []).push(arguments);
+        };
+
+      /* customize formbutton below*/
+      formbutton("create", {
+        action: "https://formspree.io/f/mzbyanak",
+        title: "How can we help?",
+        fields: [
+          {
+            type: "email",
+            label: "Email:",
+            name: "email",
+            required: true,
+            placeholder: "your@email.com",
+          },
+          {
+            type: "textarea",
+            label: "Message:",
+            name: "message",
+            placeholder: "What's on your mind?",
+          },
+          { type: "submit" },
+        ],
+        styles: {
+          title: {
+            backgroundColor: "gray",
+          },
+          button: {
+            backgroundColor: "gray",
+          },
+        },
+      });
+    </script>
+
     <!-- /SCRIPTS -->
   </body>
 </html>
